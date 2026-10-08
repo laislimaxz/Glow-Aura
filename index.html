@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta tag essencial para responsividade em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow & Aura | Maquilhagem & Cosmética</title>
+    <style>
+        /* Reset básico */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F7EBE8;
+            color: #4A4A4A;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navegação Responsiva */
+        header {
+            background-color: #FFFFFF;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #8B3A4F;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #D4AF37;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #8B3A4F;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: #D4AF37;
+        }
+
+        /* Banner Principal (Cartaz) */
+        .hero {
+            background: linear-gradient(135deg, #8B3A4F 0%, #B85B71 100%);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            max-width: 650px;
+            margin: 0 auto 25px auto;
+            opacity: 0.9;
+        }
+
+        .btn {
+            background-color: #D4AF37;
+            color: #FFFFFF;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: background 0.3s, transform 0.2s;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #B59228;
+            transform: translateY(-2px);
+        }
+
+        /* Estrutura dos Conteúdos */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #8B3A4F;
+            margin-bottom: 30px;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+        }
+
+        /* Grid Flexível Responsiva */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #FFFFFF;
+            border-radius: 12px;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card h3 {
+            color: #8B3A4F;
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Rodapé Responsivo */
+        footer {
+            background-color: #2D2D2D;
+            color: #FFFFFF;
+            padding: 40px 20px 20px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+        }
+
+        .footer-info p {
+            margin: 8px 0;
+            font-size: 0.95rem;
+            color: #DDD;
+        }
+
+        footer a {
+            color: #D4AF37;
+            text-decoration: none;
+        }
+
+        /* =================================================== */
+        /* MEDIA QUERIES (Ajustes para Tablets e Telemóveis) */
+        /* =================================================== */
+
+        /* Dispositivos móveis (Smartphones) */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+                padding: 15px 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                padding: 40px 15px;
+            }
+
+            .container {
+                margin: 25px auto;
+            }
+
+            .grid {
+                grid-template-columns: 1fr; /* 1 coluna no telemóvel */
+            }
+        }
+
+        /* Ajuste para ecrãs muito pequenos */
+        @media (max-width: 480px) {
+            .btn {
+                width: 100%; /* Botão ocupa toda a largura */
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Logótipo -->
+    <header>
+        <div class="logo">Glow <span>&</span> Aura</div>
+        <nav>
+            <a href="#produtos">Produtos</a>
+            <a href="#ia">Provador IA</a>
+            <a href="#contacto">Contacto</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </nav>
+    </header>
+
+    <!-- Banner Principal (Cartaz) -->
+    <section class="hero">
+        <h1>Realce a sua Beleza Natural</h1>
+        <p>Maquilhagem cruelty-free, vegana e de alta performance. Descubra a coleção Glow & Aura e sinta-se radiante todos os dias.</p>
+        <a href="#produtos" class="btn">Ver Coleção</a>
+    </section>
+
+    <!-- Secção de Produtos em Destaque -->
+    <main class="container" id="produtos">
+        <h2 class="section-title">Mais Vendidos</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>💄 Batom Velvet Matte</h3>
+                <p>Longa duração com hidratação intensa de óleo de jojoba.</p>
+            </div>
+            <div class="card">
+                <h3>✨ Iluminador Golden Glow</h3>
+                <p>Brilho natural e radiante para todos os tons de pele.</p>
+            </div>
+            <div class="card">
+                <h3>👁️ Paleta de Sombras Sunset</h3>
+                <p>12 cores altamente pigmentadas com acabamento mate e cintilante.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Funcionalidade de IA -->
+    <section class="container" id="ia">
+        <h2 class="section-title">Inteligência Artificial & Beleza</h2>
+        <div class="card" style="max-width: 700px; margin: 0 auto;">
+            <h3>🤖 Provador Virtual & Recomendador de Tom</h3>
+            <p style="margin-bottom: 20px;">Não sabe qual é o seu tom de base ideal? Utilize a nossa IA para analisar o seu tom de pele e experimentar produtos em tempo real através da câmara!</p>
+            <a href="#" class="btn">Experimentar Agora com IA</a>
+        </div>
+    </section>
+
+    <!-- Rodapé & Contacto -->
+    <footer id="contacto">
+        <div class="footer-content footer-info">
+            <h3 style="color: #D4AF37; margin-bottom: 10px;">Contacto</h3>
+            <p><strong>Email:</strong> atendimento@glowandaura.pt</p>
+            <p><strong>WhatsApp:</strong> +351 912 345 679</p>
+            <p><strong>Redes Sociais:</strong> Instagram @glowandaura.beauty | TikTok @glowandaura</p>
+        </div>
+        <p style="font-size: 0.85rem; color: #AAA;">&copy; 2026 Glow & Aura. Todos os direitos reservados. Repositório alojado no GitHub.</p>
+    </footer>
+
+</body>
+</html>
